@@ -6,7 +6,7 @@
     "dev": "next dev",
     "hostdev": "next dev --hostname 192.168.0.165",
     "build": "next build",
-    "start": "NODE_ENV=production NODE_PORT=8004 node server.js",
+    "start": "cross-env NODE_ENV=production NODE_PORT=8004 node server.js",
     "export": "next build",
     "lint": "next lint",
     "check-translations": "translation-key-purge"
@@ -50,6 +50,7 @@
     "react-share": "^5.1.0",
     "redux-persist": "^6.0.0",
     "sass": "^1.65.1",
+    "sharp": "^0.34.3",
     "sweetalert2": "^11.11.0",
     "swiper": "^10.3.0",
     "translation-key-purge": "^1.0.13",
@@ -63,5 +64,8 @@
   },
   "overrides": {
     "undici": "5.28.4"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
